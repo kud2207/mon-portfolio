@@ -20,6 +20,10 @@ import prestashoplIcon from '../assets/img/prestashop.png';
 import rxIcon from '../assets/img/reseaux.png';
 import telecomlIcon from '../assets/img/telecom.png';
 
+// ==== Exemple d'images pour les certificats ====
+import ccnaIcon from '../assets/img/ccna.png';
+import diplomaIcon from '../assets/img/devweb.png';
+
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState('Languages');
 
@@ -64,12 +68,26 @@ export const Skills = () => {
       { name: "Telecom Infrastructure", icon: telecomlIcon }
     ],
   };
+  const certifications = [
+    {
+      name: "CCNA (in progress)",
+      icon: ccnaIcon,
+      description: "Currently preparing for the Cisco Certified Network Associate certification — focused on routing, switching, and infrastructure management."
+    },
+    {
+      name: "Developer Certification – OpenClassrooms",
+      icon: diplomaIcon,
+      description: "Certified in both Front-End and Back-End javascript development through professional OpenClassrooms programs."
+    },
+  ];
 
   return (
     <section className="skill" id="skills">
       <div className="container">
         <div className="row">
           <div className="col-12">
+
+            {/* ==== SKILLS ==== */}
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
@@ -89,10 +107,10 @@ export const Skills = () => {
                 ))}
               </div>
 
-              {/* ==== Carousel correspondant à l’onglet actif ==== */}
-              <Carousel itemClass='m-10' responsive={responsive} infinite={true} className="skill-slider mt-3">
+              {/* ==== Carousel ==== */}
+              <Carousel itemClass="m-10" responsive={responsive} infinite={true} className="skill-slider mt-3">
                 {categories[activeTab].map((skill, index) => (
-                  <div key={index} className="item">
+                  <div key={index} className="item text-center">
                     <img
                       src={skill.icon}
                       alt={skill.name}
@@ -102,11 +120,67 @@ export const Skills = () => {
                   </div>
                 ))}
               </Carousel>
-
             </div>
+
+            {/* ==== CERTIFICATIONS ==== */}
+            <div className="skill-bx wow zoomIn mt-4">
+              <h2>Certifications</h2>
+              <p>
+                Continuous learning and professional validation through global certifications and formal education.
+              </p>
+
+              <div className="certifications-list mt-4">
+                {certifications.map((cert, index) => (
+                  <div
+                    key={index}
+                    className="cert-item d-flex align-items-center mb-4"
+                    style={{
+                      backgroundColor: "#1c1c1c",
+                      padding: "15px 20px",
+                      borderRadius: "10px",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+                      flexWrap: "wrap"
+                    }}
+                  >
+                    <img
+                      src={cert.icon}
+                      alt={cert.name}
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                        marginRight: "20px"
+                      }}
+                    />
+                    <div style={{ flex: 1, color: "white" }}>
+                      <h5 style={{ marginBottom: "5px", fontWeight: "bold", color: "#8e44ad" }}>
+                        {cert.name}
+                      </h5>
+                      <p style={{ margin: 0, color: "#aaa" }}>{cert.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
+      {/* ==== Responsive Style ==== */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .cert-item {
+              flex-direction: column !important;
+              text-align: center;
+            }
+            .cert-item img {
+              margin: 0 0 10px 0 !important;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };

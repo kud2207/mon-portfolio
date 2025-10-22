@@ -16,6 +16,11 @@ import chemReuImg5 from "../assets/img/web/Chemin-reusite/5.png";
 import chemReuImg6 from "../assets/img/web/Chemin-reusite/6.png";
 import chemReuImg7 from "../assets/img/web/Chemin-reusite/7.png";
 
+import tradingImg1 from "../assets/img/mobile/TrackTrading/1.png";
+import tradingImg2 from "../assets/img/mobile/TrackTrading/2.png";
+import tradingImg3 from "../assets/img/mobile/TrackTrading/3.png";
+
+
 export const Projects = () => {
   const [modalShow, setModalShow] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -45,6 +50,20 @@ export const Projects = () => {
       website: "https://chemin-de-le-reussite-frontend-reac.vercel.app/",
       period: "Avrl 2025 - June 2025",
       technologies: ["CSS", "JS", "TS", "ReactJS", "Express", "MongoDB"]
+    },
+    {
+      title: "TrackTrading",
+      company: "Fastdevz",
+      category: "Mobile",
+      description: "Retrieve data sent by the Alparasing API and monitor it within the mobile application.",
+      images: [tradingImg3, tradingImg2, tradingImg1,],
+      github: [
+        "https://github.com/kud2207/front-test-trading.git",
+        "https://github.com/kud2207/back-test-trading.git"
+      ],
+      website: "",
+      period: "fev 2025 - mars 2025",
+      technologies: ["TS", "React Native", "Express", "PostgreSQL", "Alpaca Trading"]
     },
   ];
 
@@ -172,10 +191,25 @@ export const Projects = () => {
                       <p>
                         <strong style={{ color: '#17202A' }}>GitHub:</strong><br />
                         {selectedProject.github.map((link, idx) => (
-                          <a key={idx} href={link} target="_blank" rel="noreferrer" style={{ display: "block" }}>{link}</a>
+                          <a
+                            key={idx}
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{
+                              display: "block",
+                              paddingRight: '10px',
+                              marginBottom: '3px',
+                              wordBreak: 'break-all'
+                            }}
+                          >
+                            {link}
+                          </a>
+
                         ))}
                       </p>
                     )}
+
 
                     {selectedProject.website && (
                       <p><strong style={{ color: '#17202A' }}>Website:</strong> <a href={selectedProject.website} target="_blank" rel="noreferrer">{selectedProject.website}</a></p>
