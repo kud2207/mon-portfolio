@@ -19,7 +19,7 @@ export const Projects = () => {
       title: "CoService",
       company: "OpenIntech",
       category: "Web",
-      description: "App to management",
+      description: "Implementation and design of multiple dashboard interfaces with a focus on user experience (UI/UX).",
       images: [CoServiceImg1, CoServiceImg2, CoServiceImg3, CoServiceImg4],
       github: "PRIVITE",
       website: "https://coservice.dilios.me/ ",
