@@ -1,1 +1,9 @@
-node_modules
+# Ignorer le dossier node_modules
+node_modules/
+
+# Autres fichiers à ignorer
+dist/
+build/
+.env
+.DS_Store
+.vscode/
