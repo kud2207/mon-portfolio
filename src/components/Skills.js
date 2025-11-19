@@ -89,8 +89,8 @@ export const Skills = () => {
 
             {/* ==== SKILLS ==== */}
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>
+              <h2 style={{ fontWeight: "bold", color: "#8e44ad" }} >Skills</h2>
+              <p style={{color:'white'}}>
                 My passion is to combine web, mobile, and telecom expertise to deliver complete solutions.
               </p>
 
@@ -123,8 +123,9 @@ export const Skills = () => {
             </div>
 
             {/* ==== CERTIFICATIONS ==== */}
-            <div className="skill-bx wow zoomIn mt-4">
-              <h2>Certifications</h2>
+            <div 
+            className="skill-bx wow zoomIn mt-4" >
+              <h2 style={{ fontWeight: "bold", color: "#8e44ad" }}>Certifications</h2>
               <p>
                 Continuous learning and professional validation through global certifications and formal education.
               </p>
@@ -135,10 +136,10 @@ export const Skills = () => {
                     key={index}
                     className="cert-item d-flex align-items-center mb-4"
                     style={{
-                      backgroundColor: "#1c1c1c",
-                      padding: "15px 20px",
+                      // backgroundColor: "#1c1c1c",
+                      padding: "0px 20px",
                       borderRadius: "10px",
-                      boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+                      // boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
                       flexWrap: "wrap"
                     }}
                   >
@@ -146,8 +147,8 @@ export const Skills = () => {
                       src={cert.icon}
                       alt={cert.name}
                       style={{
-                        width: "100px",
-                        height: "100px",
+                        width: "150px",
+                        height: "150px",
                         objectFit: "contain",
                         marginRight: "20px"
                       }}
@@ -156,7 +157,7 @@ export const Skills = () => {
                       <h5 style={{ marginBottom: "5px", fontWeight: "bold", color: "#8e44ad" }}>
                         {cert.name}
                       </h5>
-                      <p style={{ margin: 0, color: "#aaa" }}>{cert.description}</p>
+                      <p style={{ margin: 0, color: "white" }}>{cert.description}</p>
                     </div>
                   </div>
                 ))}

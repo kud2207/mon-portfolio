@@ -306,10 +306,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  /* background: #151515; */
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 10px 5px;
   margin-top: -60px;
 }
 .skill h2 {
@@ -699,7 +699,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   margin: 25px 0;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(255, 255, 255, 0.05); */
   border-radius: 12px;
   backdrop-filter: blur(10px);
 }

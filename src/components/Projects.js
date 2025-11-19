@@ -20,6 +20,15 @@ import tradingImg1 from "../assets/img/mobile/TrackTrading/1.png";
 import tradingImg2 from "../assets/img/mobile/TrackTrading/2.png";
 import tradingImg3 from "../assets/img/mobile/TrackTrading/3.png";
 
+import chatCatImg1 from "../assets/img/web/catChat/1.png";
+import chatCatImg2 from "../assets/img/web/catChat/2.png";
+import chatCatImg3 from "../assets/img/web/catChat/3.png";
+import chatCatImg4 from "../assets/img/web/catChat/4.png";
+import chatCatImg5 from "../assets/img/web/catChat/5.png";
+import chatCatImg6 from "../assets/img/web/catChat/6.png";
+import chatCatImg7 from "../assets/img/web/catChat/7.png";
+
+
 
 export const Projects = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -36,6 +45,26 @@ export const Projects = () => {
       website: "https://coservice.dilios.me/",
       period: "Sept 2025 - Now",
       technologies: ["Tailwind", "TS", "PHP", "ReactTS", "Laravel12-Inertia", "PostgreSQL"]
+    },
+    {
+      title: "catChat",
+      company: "Myself",
+      category: "Web",
+      description: `Development of a real-time web chat application featuring an interactive and responsive UI,
+        support for multiple color themes (light/dark/custom modes), 
+        and robust security mechanisms (JWT authentication, end-to-end or transport-level message encryption, 
+        CSRF/XSS protection, rate limiting, etc.).`,
+      images: [chatCatImg1, chatCatImg2, chatCatImg3, chatCatImg4, chatCatImg5, chatCatImg6, chatCatImg7],
+      github: [
+        "https://github.com/kud2207/back-catChtat.git",
+        "https://github.com/kud2207/front-catChtat.git"
+      ],
+      website: "https://catchat-5woz.onrender.com",
+      period: "Nov 2025",
+      technologies: [
+        "Tailwind", "JS", "TS", "ReactTS", "Express.Js",
+        "MongoDB", "Socket.io", "Cloudinary",
+      ]
     },
     {
       title: "CheminDeLaReussite",
@@ -78,11 +107,11 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <h2 style={{ fontWeight: "bold", color: "#8e44ad" }}>Projects</h2>
-            <p>
+            <span>
               I have gained hands-on experience with one year of personal projects and <span style={{ fontWeight: 'bold', color: '#8e44ad' }}>over one year of enterprise-level projects</span>,
               covering Web development, Mobile applications, and Network & Telecom.
-            </p>
-
+            </span>
+            <p />
             {/* ==== Tabs ==== */}
             <Tab.Container defaultActiveKey="Web">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
